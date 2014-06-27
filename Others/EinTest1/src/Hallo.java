@@ -1,4 +1,0 @@
-// hallilloo
-public class Hallo {
-
-}
