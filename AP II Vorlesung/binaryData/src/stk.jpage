@@ -1,0 +1,9 @@
+
+"abc" == "abc"(boolean) true
+	
+String a = "abc";
+String b = null;
+
+b.equals(a)
+
+exception occurred during evaluation:  java.lang.NullPointerException
