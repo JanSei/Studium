@@ -1,0 +1,2 @@
+Person person = new Person();
+person.setName("Fred");person.setMaximumBooks(10);person.getMaximumBooks()
