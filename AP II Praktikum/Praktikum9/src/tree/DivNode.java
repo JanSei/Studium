@@ -7,7 +7,7 @@ public class DivNode extends BinOpNode {
 
     public double value() {
         // 
-        return 0.0;
+        return left.value() / right.value();
     }
     
     protected String operator() {

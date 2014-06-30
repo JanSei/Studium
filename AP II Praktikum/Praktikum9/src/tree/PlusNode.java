@@ -1,16 +1,16 @@
 package tree;
 
 public class PlusNode extends BinOpNode {
-    public PlusNode(Node left, Node right) {
-        super(left, right);
-    }
+	public PlusNode(Node left, Node right) {
+		super(left, right);
+	}
 
-    public double value() {
-        // TODO korrigieren
-        return 0.0;
-    }
-    
-    protected String operator() {
-        return "+";
-    }
+	public double value() {
+		// TODO fertig korrigieren
+		return left.value() + right.value();
+	}
+
+	protected String operator() {
+		return "+";
+	}
 }

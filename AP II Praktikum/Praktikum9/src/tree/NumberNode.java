@@ -1,20 +1,20 @@
 package tree;
 
 public class NumberNode implements Node {
-    private double number;
+	private double number;
 
-    public NumberNode(double number) {
-        this.number = number;
-    }
-    
-    @Override
-    public String toString() {
-        // TODO korrigieren
-        return "";
-    }
-    
-    public double value() {
-        // TODO korrigieren
-        return 0.0;
-    }
+	public NumberNode(double number) {
+		this.number = number;
+	}
+
+	@Override
+	public String toString() {
+		// TODO fertig korrigieren
+		return "" + number;
+	}
+
+	public double value() {
+		// TODO fertig korrigieren
+		return number;
+	}
 }

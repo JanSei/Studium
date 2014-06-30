@@ -26,7 +26,7 @@ final class Calculator {
             String input = readLine();
             try {
                 Node ast = Parser.parse(input, new TreeBuilder());
-                System.out.println("\n" + ast.toString() + "\n: " + ast.value());
+                System.out.println("\n" + ast.toString() + "\n= " + ast.value());
             } catch (IllegalArgumentException e) {
                 if (!input.equals(""))
                     System.out.println("Syntaxfehler");
