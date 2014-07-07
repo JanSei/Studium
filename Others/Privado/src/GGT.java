@@ -13,6 +13,23 @@ public class GGT {
 			if(x > y) x = x-y;
 			else y = y-x;
 		
+		// Bessere Variante des ggT-Algorithmus
+		/*
+		 * while ((x > 0) && (y > 0))
+		 * 		if(x >= y) x = x % y;
+		 * 		else	   y = y % x;
+		 * z = x + y;
+		 */
+		
+		// Rekursive Variante des ggT-Algorithmus
+		/*
+		 * int ggT(int x, int y) {
+		 * 		if (x == y)  	return x;
+		 * 		else if (x > y)	return ggT(x-y, y);
+		 * 		else			return ggT(x, y-x);
+		 * }
+		 */
+		
 		JOptionPane.showMessageDialog(null, "Ergebnis ist: " + x);
 	}
 
