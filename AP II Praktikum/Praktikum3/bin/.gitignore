@@ -3,5 +3,6 @@
 /MapExceptionTest.class
 /MapRemoveTest.class
 /TestKey.class
-/finance/
-/gui/
+/finance
+/gui
+/util

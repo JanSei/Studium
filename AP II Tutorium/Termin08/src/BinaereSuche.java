@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 
-public class BinäreSuche {
+public class BinaereSuche {
 	
 	public static final int NOT_FOUND = -1;
 
