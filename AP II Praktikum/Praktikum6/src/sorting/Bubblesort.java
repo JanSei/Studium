@@ -20,19 +20,18 @@ public class Bubblesort implements IntSort {
      * </pre>
      * Der Strich | trennt den unsortierten von dem sortierten Teil.
      */
-    public void sort(int[] array) {
-    	int tmp = 0;
-    	for (int i = 1; i < array.length; i++) {
-			for (int j = 0; j < array.length - i; j++) {
-				if (array[j] > array[j+1]) {
-					tmp = array[j+1];
-					array[j+1] = array[j];
-					array[j] = tmp;
-				}
-			}
-		}
-    }
-}
+//    public void sort(int[] array) {
+//    	int tmp = 0;
+//    	for (int i = 1; i < array.length; i++) {
+//			for (int j = 0; j < array.length - i; j++) {
+//				if (array[j] > array[j+1]) {
+//					tmp = array[j+1];
+//					array[j+1] = array[j];
+//					array[j] = tmp;
+//				}
+//			}
+//		}
+//    }
 
 
 
@@ -62,3 +61,21 @@ public class Bubblesort implements IntSort {
     		}
     	}
     	*/
+
+// optimiert
+	public void sort(int[] array) {
+    	boolean done = false;
+    	int tmp = 0;
+    	for (int i = array.length-1; i > 0 && !done; i--) {
+    		done = true;
+			for (int j = 0; j < i; j++) {
+				if (array[j] > array[j+1]) {
+					tmp = array[j+1];
+					array[j+1] = array[j];
+					array[j] = tmp;
+					done = false;
+				}
+			}
+		}
+    }
+}

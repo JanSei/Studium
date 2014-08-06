@@ -19,12 +19,12 @@ public class Hashing<K, V> implements IMap<K, V> {
 	@SuppressWarnings("unchecked")
 	private Entry<K, V>[] data = new Entry[100];
 
-	@Override
+//	@Override
 	public int size() {
 		return size;
 	}
 
-	@Override
+//	@Override
 	public V put(K key, V value) {
 		Entry<K, V> p = referenceOf(key);
 		if (p == null) {

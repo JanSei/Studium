@@ -7,10 +7,10 @@ public class StringSort {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		String[] strings = {				"Es war einmal",
-				"datt is schön un joot",
-				"Übung 1",
-				"Ärger und Frust",
-				"Überflüssig",
+				"datt is schï¿½n un joot",
+				"ï¿½bung 1",
+				"ï¿½rger und Frust",
+				"ï¿½berflï¿½ssig",
 				"Ueberfluss",
 				"Philip J. Fry, Intergalactic Delivery Boy"
 		};
@@ -20,7 +20,6 @@ public class StringSort {
 		String[] sortierung2 = Arrays.copyOf(strings, strings.length);
 		final Comparator<Object> s = Collator.getInstance(Locale.GERMANY);
 		Arrays.sort(sortierung2, new Comparator<Object>(){
-			@Override
 			public int compare(Object o1, Object o2) {
 				return - s.compare(o1, o2);
 			}		

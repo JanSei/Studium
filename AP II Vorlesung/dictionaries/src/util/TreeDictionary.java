@@ -29,12 +29,10 @@ public final class TreeDictionary extends AbstractDictionary
         }
     }
 
-	@Override
 	public void setTableSize(int size) {
 		// noop
 	}
 
-    @Override
 	public int size() {
         return count(root);
     }
@@ -51,7 +49,6 @@ public final class TreeDictionary extends AbstractDictionary
             return 1 + count(p.left) + count(p.right);
     } 
 
-    @Override
 	public Object put(Object key, Object value) {
         if (value == null)
             throw new NullPointerException("value may not be null");
@@ -60,12 +57,10 @@ public final class TreeDictionary extends AbstractDictionary
         return oldValue;
     }
 
-    @Override
 	public boolean contains(Object key) {
         return findNode(root, key) != null;
     }
 
-    @Override
 	public Object get(Object key) {
         Node  p = findNode(root, key);
         return (p == null)? null: p.value;
@@ -74,12 +69,10 @@ public final class TreeDictionary extends AbstractDictionary
     /**
      * Nicht unterstuetzt.
      */
-    @Override
 	public Object remove(Object key) {
         throw new UnsupportedOperationException();
     }
     
-    @Override
 	public Iterator<Object> iterator() {
         return new TreeIterator(root);
     }
@@ -154,12 +147,10 @@ public final class TreeDictionary extends AbstractDictionary
             }
         }
         
-       @Override
-	public boolean hasNext() {
+        public boolean hasNext() {
             return ! stk.empty();
         }
         
-        @Override
 		public Object next() {
             try {
                 Node node = stk.pop();
@@ -173,7 +164,6 @@ public final class TreeDictionary extends AbstractDictionary
         /**
          * Nicht unterstuetzt.
          */
-        @Override
 		public void remove() {
             throw new UnsupportedOperationException();
         }

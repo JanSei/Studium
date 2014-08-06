@@ -32,17 +32,14 @@ public class SList implements Iterable<Double> {
 		p.next = newNode;
 	}
 
-	@Override
 	public Iterator<Double> iterator() {
 		return new Iterator<Double>() {
 			Node p = head.next;
 
-			@Override
 			public boolean hasNext() {
 				return p != head;
 			}
 
-			@Override
 			public Double next() {
 				if (!hasNext())
 					throw new NoSuchElementException();
@@ -51,7 +48,6 @@ public class SList implements Iterable<Double> {
 				return v;
 			}
 
-			@Override
 			public void remove() {
 				throw new UnsupportedOperationException();
 			}

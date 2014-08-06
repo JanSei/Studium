@@ -73,17 +73,14 @@ public class LinList implements Iterable<Double>{
     	
     }
 
-    @Override
-	public Iterator<Double> iterator() {
+    public Iterator<Double> iterator() {
 		return new Iterator<Double>() {
 			Node p = f;
 					
-			@Override
 			public boolean hasNext() {
 				return p != null;
 			}
 
-			@Override
 			public Double next() {
 				if (! hasNext()) throw new NoSuchElementException();
 				Double v = p.v;
@@ -91,7 +88,6 @@ public class LinList implements Iterable<Double>{
 				return v;
 			}
 
-			@Override
 			public void remove() {
 				throw new UnsupportedOperationException();
 			}
